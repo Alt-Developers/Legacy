@@ -52,3 +52,13 @@ Currently this repo contains version 0-3 of System13
   - Try new User Interface (Modern Minimal)
 - **Current Version**
   - You can find current version of this System 13 Project at [Click Here](https://github.com/SS-Developers/System13)
+
+## Copyrights
+
+This Project is protected under the
+
+```sh
+Mozilla Public License V2.0
+```
+
+to the license file [Click Here](LICENSE)
