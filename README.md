@@ -1,4 +1,4 @@
-# Legacy
+# Legacy 🕰
 
 This repository conatins old / outdated projects from their main repository
 
@@ -22,6 +22,8 @@ npm start
 to start the server at port `3000`
 
 ```
+[app.js]
+
 app.listen(3000);
            ^^^^ Change this
 ```
@@ -30,13 +32,15 @@ app.listen(3000);
 
 ### if you're downloading the version without node
 
-Just download and click on **index.html**
+Just download and open `index.html`
 
 ## What does this repo contain?
 
 Currently this repo contains version 0-3 of System13
 
 ### System13
+
+System 13 Legacy Floder [Click Here](System13)
 
 - Alpha
   - Python Edition (Terminal Based)
@@ -51,18 +55,18 @@ Currently this repo contains version 0-3 of System13
 - Experimental Edition
   - Try new User Interface (Modern Minimal)
 - **Current Version**
-  - You can find current version of this System 13 Project at [Click Here](https://github.com/SS-Developers/System13)
+  - Go to current version of this Project [Click Here](https://github.com/SS-Developers/System13)
 
 ### Portals
 
-Portals Floder [Click Here](Portals)
+Portals Legacy Floder [Click Here](Portals)
 
 - Version 1.0
   - First ever version of portal rushly created in one day
 - Version 2.0
   - Second version of portal develop from version 1.0 UI look more refined and polished
 - **Current Version**
-  - Go to current version of this Portals Project [Click Here](https://github.com/SS-Developers/Portals)
+  - Go to current version of this Project [Click Here](https://github.com/SS-Developers/Portals)
 
 ## Copyrights
 
