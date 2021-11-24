@@ -1,0 +1,215 @@
+.result {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1rem;
+  grid-template-areas: "attack defend start";
+  justify-content: space-between;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.attackers-wrapper {
+  grid-area: attack;
+  text-align: left;
+  overflow: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  .attackers__label {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding: 6% 0 0 5%;
+    height: 6rem;
+    background-image: linear-gradient(to top left, #ff2121, #ff5c5c);
+    width: 90%;
+    margin: auto;
+    border-radius: 1.1rem 1.1rem 0 0;
+  }
+
+  .attackers {
+    background-color: $gray-dark-2;
+    width: 90%;
+    height: 50rem;
+    margin: auto;
+    border-radius: 0 0 1.1rem 1.1rem;
+    text-align: center;
+    overflow: scroll;
+
+    &__row {
+      padding: 2.25rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.1rem solid rgba(105, 105, 105, 0.596);
+      font-size: 1.7rem;
+
+      &--label {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.defenders-wrapper {
+  grid-area: defend;
+  text-align: center;
+
+  .defenders__label {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 6rem;
+    background-image: linear-gradient(
+      to top left,
+      rgb(11, 89, 255),
+      rgb(19, 129, 255)
+    );
+    width: 90%;
+    margin: auto;
+    padding: 6% 0 0 5%;
+    border-radius: 1.1rem 1.1rem 0 0;
+  }
+
+  .defenders {
+    background-color: $gray-dark-2;
+    width: 90%;
+    height: 50rem;
+    margin: auto;
+    border-radius: 0 0 1.1rem 1.1rem;
+    text-align: center;
+    overflow: scroll;
+
+    &__row {
+      padding: 2.25rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.1rem solid rgba(105, 105, 105, 0.596);
+      font-size: 1.7rem;
+
+      &--label {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// .start {
+//   &__wrapper {
+//     grid-area: start;
+//     background-color: #202020;
+
+//     border-radius: 1.1rem;
+//   }
+//   &__form {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-areas: left right;
+
+//     &--left {
+//       grid-area: left;
+//     }
+
+//     &--right {
+//       grid-area: right;
+//     }
+
+//     input {
+//       color: black;
+//       width: 40%;
+//     }
+//   }
+// }
+
+.start {
+  color: black;
+  &__wrapper {
+    grid-area: start;
+    background-color: #202020;
+    border-radius: 1.1rem;
+  }
+
+  &__text {
+    padding: 5% 0 5% 5%;
+
+    border-bottom: 1px solid rgba(105, 105, 105, 0.596);
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__form {
+    display: grid;
+    margin: 2rem;
+    margin-top: 2rem;
+    border-radius: 1.1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2.5fr 0.6fr;
+    grid-template-areas:
+      "playerleft playerright"
+      "submit submit";
+    background-color: #303030;
+
+    button {
+      padding-left: 2%;
+      grid-area: submit;
+      margin: 0 0 5% 5%;
+      width: 90%;
+    }
+
+    &--left {
+      padding: 2rem;
+      grid-area: playerleft;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        border: none;
+        height: 3rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        transition: all 0.2s;
+        padding: 1rem;
+        background-color: #303030;
+        color: white;
+        border: 1px rgb(77, 77, 77) solid;
+
+        &:focus {
+          padding: 2rem;
+        }
+      }
+    }
+    &--right {
+      padding: 2rem;
+      grid-area: playerright;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        border: none;
+        height: 3rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        transition: all 0.2s;
+        background-color: #303030;
+        color: white;
+        border: 1px rgb(77, 77, 77) solid;
+
+        &:focus {
+          padding: 2rem;
+        }
+      }
+    }
+  }
+}

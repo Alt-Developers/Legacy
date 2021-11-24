@@ -1,0 +1,16 @@
+@mixin othersContent {
+  border-radius: 1.1rem;
+
+  padding: 2.5rem;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  h3 {
+    font-size: 5rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}

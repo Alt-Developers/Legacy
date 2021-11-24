@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/* line 1, asset/sass/base/_base.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; }
+
+/* line 8, asset/sass/base/_base.scss */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+
+/* line 13, asset/sass/base/_base.scss */
+body {
+  background: #f0f0f0; }
+
+/* line 1, asset/sass/base/_typography.scss */
+h1 {
+  font-size: 7rem; }
+
+/* line 5, asset/sass/base/_typography.scss */
+h2 {
+  font-size: 5rem;
+  font-weight: 600; }
+
+/* line 52, asset/sass/components/_overview.scss */
+.section-overview__grid {
+  display: grid;
+  height: 60vh;
+  padding: 2rem;
+  grid-template-columns: 1fr .5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2rem;
+  grid-gap: 5rem;
+  grid-template-areas: "bigone bigone one" "two bigtwo bigtwo"; }
+
+/* line 66, asset/sass/components/_overview.scss */
+.section-overview img {
+  width: 100%;
+  border-radius: 1.1rem; }
+
+/* line 71, asset/sass/components/_overview.scss */
+.section-overview__big1 {
+  grid-area: bigone;
+  border-radius: 1.2rem; }
+
+/* line 76, asset/sass/components/_overview.scss */
+.section-overview__1 {
+  grid-area: one;
+  border-radius: 1.1rem; }
+  /* line 81, asset/sass/components/_overview.scss */
+  .section-overview__1--wrapper h3 {
+    font-size: 4rem; }
+  /* line 84, asset/sass/components/_overview.scss */
+  .section-overview__1--wrapper p {
+    font-size: 2rem; }
+
+/* line 91, asset/sass/components/_overview.scss */
+.section-overview__2 {
+  grid-area: two;
+  border-radius: 1.2rem; }
+  /* line 96, asset/sass/components/_overview.scss */
+  .section-overview__2 h3 {
+    font-size: 4rem; }
+  /* line 99, asset/sass/components/_overview.scss */
+  .section-overview__2 p {
+    font-size: 2rem; }
+
+/* line 104, asset/sass/components/_overview.scss */
+.section-overview__big2 {
+  grid-area: bigtwo;
+  border-radius: 1.2rem; }
+
+/* line 1, asset/sass/components/_btn.scss */
+.btn {
+  border-radius: 1.1rem;
+  width: 80%;
+  height: 5rem;
+  outline: none;
+  border: #303030 solid 0.2rem;
+  vertical-align: bottom;
+  margin-top: 19%; }
+
+/* line 2, asset/sass/layout/_header.scss */
+.header__text {
+  padding: 2rem 0 2rem 3rem;
+  line-height: 8rem; }
+
+/* line 1, asset/sass/layout/_navigation.scss */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #dc3d4b;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease; }
+  /* line 12, asset/sass/layout/_navigation.scss */
+  .sidebar.open {
+    width: 250px; }
+  /* line 16, asset/sass/layout/_navigation.scss */
+  .sidebar .logo-details {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative; }
+    /* line 22, asset/sass/layout/_navigation.scss */
+    .sidebar .logo-details .icon {
+      opacity: 0;
+      transition: all 0.5s ease;
+      height: 40px; }
+    /* line 28, asset/sass/layout/_navigation.scss */
+    .sidebar .logo-details .logo_name {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      opacity: 0;
+      transition: all 0.5s ease;
+      height: 40px; }
+  /* line 39, asset/sass/layout/_navigation.scss */
+  .sidebar.open .logo-details .icon,
+  .sidebar.open .logo-details .logo_name {
+    opacity: 1; }
+  /* line 45, asset/sass/layout/_navigation.scss */
+  .sidebar .logo-details #btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: all 0.4s ease;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease; }
+  /* line 58, asset/sass/layout/_navigation.scss */
+  .sidebar.open .logo-details #btn {
+    text-align: right; }
+  /* line 62, asset/sass/layout/_navigation.scss */
+  .sidebar i {
+    color: #fff;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px; }
+  /* line 71, asset/sass/layout/_navigation.scss */
+  .sidebar .nav-list {
+    margin-top: 20px;
+    height: 100%; }
+  /* line 76, asset/sass/layout/_navigation.scss */
+  .sidebar li {
+    position: relative;
+    margin: 8px 0;
+    list-style: none; }
+    /* line 81, asset/sass/layout/_navigation.scss */
+    .sidebar li .tooltip {
+      position: absolute;
+      top: -20px;
+      left: calc(100% + 15px);
+      z-index: 3;
+      background: #fff;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 400;
+      opacity: 0;
+      white-space: nowrap;
+      pointer-events: none;
+      transition: 0s; }
+    /* line 98, asset/sass/layout/_navigation.scss */
+    .sidebar li:hover .tooltip {
+      opacity: 1;
+      pointer-events: auto;
+      transition: all 0.4s ease;
+      top: 50%;
+      transform: translateY(-50%); }
+  /* line 107, asset/sass/layout/_navigation.scss */
+  .sidebar.open li .tooltip {
+    display: none; }
+  /* line 111, asset/sass/layout/_navigation.scss */
+  .sidebar input {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    width: 50px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    background: #fa4454; }
+  /* line 125, asset/sass/layout/_navigation.scss */
+  .sidebar.open input {
+    padding: 0 20px 0 50px;
+    width: 100%; }
+  /* line 130, asset/sass/layout/_navigation.scss */
+  .sidebar .bx-search {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    background: #fa4454;
+    color: #fff; }
+  /* line 140, asset/sass/layout/_navigation.scss */
+  .sidebar.open .bx-search:hover {
+    background: #fa4454;
+    color: #fff; }
+  /* line 145, asset/sass/layout/_navigation.scss */
+  .sidebar .bx-search:hover {
+    background: #fff;
+    color: #11101d; }
+  /* line 150, asset/sass/layout/_navigation.scss */
+  .sidebar li a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background: #dc3d4b; }
+    /* line 160, asset/sass/layout/_navigation.scss */
+    .sidebar li a:hover {
+      background: #fff; }
+    /* line 164, asset/sass/layout/_navigation.scss */
+    .sidebar li a .links_name {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 400;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.4s; }
+  /* line 175, asset/sass/layout/_navigation.scss */
+  .sidebar.open li a .links_name {
+    opacity: 1;
+    pointer-events: auto; }
+  /* line 182, asset/sass/layout/_navigation.scss */
+  .sidebar li a:hover .links_name,
+  .sidebar li a:hover i {
+    transition: all 0.5s ease;
+    color: #11101d; }
+  /* line 189, asset/sass/layout/_navigation.scss */
+  .sidebar li i {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 12px; }
+  /* line 196, asset/sass/layout/_navigation.scss */
+  .sidebar li.profile {
+    position: fixed;
+    height: 60px;
+    width: 78px;
+    left: 0;
+    bottom: -8px;
+    padding: 10px 14px;
+    background: orangered;
+    transition: all 0.5s ease;
+    overflow: hidden; }
+  /* line 209, asset/sass/layout/_navigation.scss */
+  .sidebar.open li.profile {
+    width: 250px; }
+  /* line 214, asset/sass/layout/_navigation.scss */
+  .sidebar li .profile-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; }
+  /* line 220, asset/sass/layout/_navigation.scss */
+  .sidebar li img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 10px; }
+  /* line 229, asset/sass/layout/_navigation.scss */
+  .sidebar li.profile .name {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap; }
+  /* line 236, asset/sass/layout/_navigation.scss */
+  .sidebar li.profile .job {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 12px; }
+  /* line 246, asset/sass/layout/_navigation.scss */
+  .sidebar .profile #log_out {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: orangered;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 0px;
+    transition: all 0.5s ease; }
+  /* line 259, asset/sass/layout/_navigation.scss */
+  .sidebar.open .profile #log_out {
+    width: 50px;
+    background: none; }
+
+@media (max-width: 420px) {
+  /* line 266, asset/sass/layout/_navigation.scss */
+  .sidebar li .tooltip {
+    display: none; } }
+
+/* line 1, asset/sass/pages/_home.scss */
+.home-section {
+  position: relative;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2; }
+
+/* line 11, asset/sass/pages/_home.scss */
+.sidebar.open ~ .home-section {
+  left: 250px;
+  width: calc(100% - 250px); }
+
+/* line 16, asset/sass/pages/_home.scss */
+.home-section .text {
+  display: inline-block;
+  color: #272727;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px; }

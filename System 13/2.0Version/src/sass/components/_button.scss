@@ -1,0 +1,29 @@
+.btn {
+  color: $blinding-white;
+  text-decoration: none;
+  background-color: $gray-light-1;
+  border: none;
+  width: 40rem;
+  height: 5rem;
+  border-radius: 1.1rem;
+  margin-top: 5rem;
+  transition: all 0.4s;
+  // border: $blinding-white solid 0.3rem;
+  // transition: 0.5s;
+
+  &:hover {
+    color: $paragrph-text-1;
+    background-color: $blinding-white;
+    transform: scale(1.05);
+    box-shadow: white 0px 0px 10px;
+  }
+
+  &:active {
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    transform: scale(0.9);
+  }
+}
+
+.dark-btn {
+  background-color: $gray-dark-2;
+}

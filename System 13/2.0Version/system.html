@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <link rel="shortcut icon" href="./src/img/icon.png" type="image/x-icon" />
+    <title>System 13 | System</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="./src/img/logo.png" alt="SS System 13 Logo" />
+      </div>
+      <a href="./index.html"><li class="nav__1">Home</li></a>
+      <a href="#" class="active nav__2"><li>System</li></a>
+      <a href="./github.html" class="nav__3"><li>Github</li></a>
+      <a href="https://ssdevelopers.xyz" class="nav__4"><li>Portals</li></a>
+    </nav>
+
+    <div class="overlay"></div>
+
+    <section class="modal warning">
+      <!-- <img src="src/img/failed.png" alt="Failed" class="modal__img"> -->
+      <h3 class="modal-header">Reminder for everyone</h3>
+      <p class="modal-info">
+        The following program isn't perfect. <br>So if there are bugs please contact the SS Developers
+      </p>
+      <button class="btn-understand btn">
+        I Understand the possible consequences
+      </button>
+    </section>
+
+    <section class="result">
+      <div class="attackers-wrapper">
+        <div class="attackers__label"><h2>Attackers</h2></div>
+        <div class="attackers">
+          <div class="attackers__row">
+            <div class="attackers__row--label">Player Name</div>
+            <div class="attackers__row--label">Score</div>
+          </div>
+          <div class="attackers__row row-doe">
+            <div class="attackers__row--add">John Doe</div>
+            <div class="attackers__row--add">1</div>
+          </div>
+        </div>
+      </div>
+      <div class="defenders-wrapper">
+        <div class="defenders__label"><h2>Defenders</h2></div>
+        <div class="defenders">
+          <div class="defenders__row">
+            <div class="defenders--label">Player Name</div>
+            <div class="defenders__row--label">Score</div>
+          </div>
+          <div class="defenders__row row-doe">
+            <div class="defenders__row--add">Jane Doe</div>
+            <div class="defenders__row--add">2</div>
+          </div>
+        </div>
+      </div>
+      <div class="start__wrapper">
+        <div class="start__text">
+          <h1>Welcome to System13</h1>
+          <p>To start input all players that are playing</p>
+          <p>Not all fields need to be filled</p>
+        </div>
+
+        <form class="start__form" action="player=">
+          <div class="start__form--left">
+            <input
+              class="form__start--Player-input"
+              type="text"
+              name=""
+              id=""
+              placeholder=""
+            />
+            <input
+              class="form__start--Player-input"
+              type="text"
+              name=""
+              id=""
+            />
+            <input
+              class="form__start--Player-input"
+              type="text"
+              name=""
+              id=""
+            />
+            <input
+              class="form__start--Player-input"
+              type="text"
+              name=""
+              id=""
+            />
+            <input
+              class="form__start--Player-input"
+              type="text"
+              name=""
+              id=""
+            />
+          </div>
+          <div class="start__form--right">
+            <input
+              class="form__start--Player-input"
+              type="text"
+              name=""
+              id=""
+            />
+            <input
+              class="form__start--Player-input"
+              type="text"
+              name=""
+              id=""
+            />
+            <input
+              class="form__start--Player-input"
+              type="text"
+              name=""
+              id=""
+            />
+            <input
+              class="form__start--Player-input"
+              type="text"
+              name=""
+              id=""
+            />
+            <input
+              class="form__start--Player-input"
+              type="text"
+              name=""
+              id=""
+            />
+          </div>
+          <button type="submit" class="submit__form--start dark-btn btn">
+            Start the randomization!
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="dark-footer">
+      <h3>MPL2.0 Lisence &copy;2021 Prawich & Jirat</h3>
+      <ul>
+        <a href="https://ssdevelopers.xyz"><li>Portals</li></a>
+        <a href="./index.html"><li>Home</li></a>
+        <a href="./github.html"><li>GitHub</li></a>
+        <a href="./docs.html"><li>Documentation</li></a>
+        <a href="./system.html"><li>System</li></a>
+        <li>Version 2.1</li>
+      </ul>
+    </footer>
+  </body>
+  <script src="./src/data/data.js"></script>
+  <script src="./src/script/system.js"></script>
+</html>

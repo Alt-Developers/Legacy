@@ -1,0 +1,64 @@
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55%;
+  background-color: $gray-dark-3;
+  padding: 6rem;
+  border-radius: 1.1rem;
+  z-index: 10;
+  text-align: left;
+
+  &__img {
+    position: absolute;
+    top: 17%;
+    right: 10%;
+    width: 25%;
+    height: 70%;
+  }
+
+  h3 {
+    font-size: 4rem;
+    color: $btn-red-1;
+    padding-bottom: 2rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+  // .small-text {
+  //   font-size: 1rem;
+  //   margin-top: 1rem;
+  // }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  filter: blur(10px);
+  z-index: 5;
+}
+
+.show-modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+.show-modal .modal {
+  /*=== Effect 1 ===*/
+  transform: translateY(0);
+
+  /*=== Effect 2 ===*/
+  /* transform: scale(1) translateY(0); */
+
+  /*=== Effect 3 ===*/
+  /* transform: rotateX(0) scale(1) translateY(0); */
+}
