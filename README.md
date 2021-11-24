@@ -62,3 +62,5 @@ Mozilla Public License V2.0
 ```
 
 to the license file [Click Here](LICENSE)
+
+**MPL 2.0 © 2021 Prawich & Jirat**
