@@ -4,16 +4,31 @@ This repository conatins old / outdated projects from their main repository
 
 ## How to get started?
 
-#### if you're downloading the version with node
+### if you're downloading the version with node
 
 to get the code select the project floder and select the sersion you wanted to use then download it
 after that use <br>
-`npm install` <br>
-to install all requried **node modules**
-then use <br>
-`npm start`
 
-#### if you're downloading the version without node
+```sh
+npm install
+```
+
+to install all of the requried node **modules**
+
+```sh
+npm start
+```
+
+to start the server at port `3000`
+
+```
+app.listen(3000);
+           ^^^^ Change this
+```
+
+> _you can customize that by change the port in app.js_
+
+### if you're downloading the version without node
 
 Just download and click on **index.html**
 
