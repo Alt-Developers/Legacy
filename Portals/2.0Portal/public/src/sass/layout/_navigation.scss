@@ -1,0 +1,79 @@
+nav {
+  width: 100vw;
+  overflow: hidden;
+  height: 9rem;
+  padding-bottom: 1rem;
+  // display: flex;
+  // justify-content: space-between;
+  // padding: 0.5rem 2rem 0.5rem 2rem;
+  background-color: $gray-dark-2;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100%;
+
+  grid-template-areas: "logo a1 a2 a3 a4";
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      padding: 2% 0 0 2%;
+      height: 6rem;
+      grid-area: logo;
+      cursor: pointer;
+    }
+  }
+
+  li {
+    height: 100%;
+    transition: background-color 0.5s;
+
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    padding-top: 10%;
+    color: $blinding-white;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 0.6rem;
+  }
+
+  a {
+    // display: flex;
+    // align-items: center;
+    // width: 30rem;
+    height: 100%;
+    // justify-content: center;
+
+    background-color: $gray-dark-2;
+    margin-left: 3rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    grid-area: auto;
+
+    :hover {
+      background-color: $nav-background-red-1;
+    }
+  }
+  .active {
+    background-color: $search-red-1;
+    border-radius: 0.6rem;
+  }
+}
+
+.nav {
+  &__1 {
+    grid-area: a1;
+  }
+  &__1 {
+    grid-area: a2;
+  }
+  &__1 {
+    grid-area: a3;
+  }
+  &__1 {
+    grid-area: a4;
+  }
+}

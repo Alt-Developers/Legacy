@@ -1,0 +1,62 @@
+.header {
+  &__wrapper {
+    background-color: $gray-light-1;
+    margin: 2%;
+    height: 70vh;
+    border-radius: 1.1rem;
+
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "main menu"
+    "main blank";
+
+    overflow: hidden; 
+  }
+
+  &__main {
+    grid-area: main;
+
+    padding: 2rem 2rem 2rem 4rem;
+    background-image: linear-gradient(218deg, rgba(255,129,78,1) 0%, rgba(226,29,255,1) 100%);
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+    grid-template-areas: "a1" "a2" "a3" "a4";
+
+    & > * {
+      list-style: none;
+      text-decoration: none;
+      color: $blinding-white;
+
+      padding: 2.5rem;
+      font-size: 3rem;
+      font-weight: 500;
+    }
+
+    &--1 {
+      grid-area: a1;
+      transition: all .3s;
+      height: 100%;
+    }
+    &--2 {
+      grid-area: a2;
+      transition: all .3s;
+      height: 100%;
+    }
+    &--3 {
+      grid-area: a3;
+      transition: all .3s;
+      height: 100%;
+    }
+    &--4 {
+      grid-area: a4;
+      transition: all .3s;
+      height: 100%;
+    }
+  }
+
+
+}

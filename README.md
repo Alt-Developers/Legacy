@@ -53,6 +53,17 @@ Currently this repo contains version 0-3 of System13
 - **Current Version**
   - You can find current version of this System 13 Project at [Click Here](https://github.com/SS-Developers/System13)
 
+### Portals
+
+Portals Floder [Click Here](Portals)
+
+- Version 1.0
+  - First ever version of portal rushly created in one day
+- Version 2.0
+  - Second version of portal develop from version 1.0 UI look more refined and polished
+- **Current Version**
+  - Go to current version of this Portals Project [Click Here](https://github.com/SS-Developers/Portals)
+
 ## Copyrights
 
 This Project is protected under the
