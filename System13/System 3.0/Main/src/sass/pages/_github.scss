@@ -1,0 +1,80 @@
+.github {
+  padding: 2vw;
+  overflow-x: hidden;
+  h1 {
+    font-size: 4vw;
+    // font-size: 6rem;
+  }
+
+  p {
+    font-size: 1vw;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 2vw;
+    margin-bottom: 2rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    height: 60vh;
+    grid-template-areas: "img text";
+    grid-gap: 2vw;
+
+    margin-top: 3rem;
+  }
+
+  &__img {
+    grid-area: img;
+
+    height: fit-content;
+    width: 100%;
+    border-radius: 1.1rem;
+  }
+
+  &__text {
+    border-radius: 1.1rem;
+    background-color: $paragrph-text-1;
+
+    padding: 3rem;
+    position: relative;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    // justify-content: space-between;
+
+    position: absolute;
+    bottom: 4vh;
+    width: 100%;
+  }
+
+  &__btn {
+    color: $blinding-white;
+    text-decoration: none;
+    background-color: $gray-light-1;
+    border: none;
+    width: 30rem;
+    height: 5rem;
+    margin-right: 2rem;
+    border-radius: 1.1rem;
+    // margin-top: 5rem;
+    transition: all 0.4s;
+    // border: $blinding-white solid 0.3rem;
+    // transition: 0.5s;
+
+    &:hover {
+      color: $paragrph-text-1;
+      background-color: $blinding-white;
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

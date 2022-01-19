@@ -1,0 +1,52 @@
+.other {
+  padding: 1rem;
+
+  margin: 3rem 5rem 3rem 3rem;
+
+  h1 {
+    font-size: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  &__List {
+    height: 60vh;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.7fr;
+    grid-template-areas: "Portal DevNews League";
+    grid-gap: 2rem;
+
+    &--Portal {
+      grid-area: Portal;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../assets/img/valorantOther.png");
+      transition: all 0.3s;
+
+      @include othersContent;
+    }
+    &--DevNews {
+      grid-area: DevNews;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../assets/img/developerAtNight.jpg");
+      border-radius: 1.1rem;
+      background-size: cover;
+      background-position-x: 100;
+      transition: all 0.3s;
+
+      @include othersContent;
+    }
+
+    &--ValoLeague {
+      grid-area: League;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../assets/img/jett.jpg");
+      border-radius: 1.1rem;
+      background-size: 100%;
+      background-position-y: 50;
+      transition: all 0.3s;
+
+      @include othersContent;
+    }
+  }
+}

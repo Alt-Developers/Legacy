@@ -1,0 +1,191 @@
+.account {
+  background-image: linear-gradient(to bottom right, #313131, $btn-red-1);
+  // background-image: src("Main/src/assets/img/elainaWallpaper.jpg");
+
+  padding: 3rem;
+  height: 100vh;
+  display: grid;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  grid-template-columns: 1fr 1fr;
+  // grid-template-rows: 1fr 1fr;
+  grid-template-areas: "acc right";
+  gap: 2rem;
+
+  &__profile {
+    &-con {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    background-color: $gray-dark-2;
+    padding: 3rem;
+    border-radius: 1.1rem;
+    grid-area: "acc";
+
+    height: fit-content;
+    img {
+      border-radius: 50%;
+      height: 20rem;
+      width: 20rem;
+      object-fit: cover;
+    }
+    button {
+      width: 100%;
+      margin-top: 2rem;
+    }
+    a {
+      overflow: hidden;
+      border-radius: 50%;
+      transition: all 0.2s;
+      position: relative;
+
+      span {
+        position: absolute;
+        left: 40%;
+        top: 40%;
+        font-size: 5rem;
+        color: #fff;
+        opacity: 0;
+        z-index: 2;
+        transition: all 0.1s;
+        transition-delay: 0.1s;
+      }
+
+      img {
+        transition: all 0.2s;
+      }
+
+      &:hover > img {
+        filter: blur(11px);
+      }
+      &:hover > span {
+        opacity: 1;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+    &--text {
+      padding-left: 3rem;
+      h1 {
+        font-size: 6rem;
+        font-weight: 700;
+      }
+      p {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  &__right {
+    grid-area: "right";
+  }
+
+  &__players {
+    background-color: $gray-dark-2;
+    border-radius: 1.1rem;
+    padding: 3rem;
+    height: fit-content;
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__addPlayer {
+    background-color: $gray-dark-1;
+    border-radius: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: fit-content;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.2s;
+
+    input {
+      width: 40%;
+      padding: 1rem;
+      background-color: transparent;
+      color: white;
+      border: 3px rgba(255, 255, 255, 0.4) solid;
+      border-radius: 0.5rem;
+      margin: 1rem;
+    }
+
+    button {
+      background-color: #41e86e;
+      width: 7rem;
+      height: 100%;
+      border: none;
+      position: absolute;
+      border-radius: 0 0.5rem 0.5rem 0;
+      transition: all 0.2s;
+      right: 0;
+      top: 0;
+
+      color: white;
+      font-size: 4rem;
+
+      &:hover {
+        width: 10rem;
+      }
+    }
+  }
+
+  &__existing {
+    background-color: $gray-dark-2;
+    border-radius: 1.1rem;
+    padding: 3rem;
+    height: fit-content;
+    margin-top: 2rem;
+
+    &--list {
+      background-color: $gray-dark-1;
+      border-radius: 1.1rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      overflow: hidden;
+
+      list-style: none;
+
+      li {
+        height: 5rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px $gray-dark-1;
+        padding: 3rem;
+        border-bottom: 0.1rem solid rgba(105, 105, 105, 0.596);
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+        h2 {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}

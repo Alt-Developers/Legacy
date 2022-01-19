@@ -1,0 +1,15 @@
+.starting {
+  height: 100vh;
+  margin: 5rem;
+  border-radius: 2rem;
+  background-color: $gray-dark-2;
+  padding: 3rem;
+
+  h1 {
+    font-size: 6rem;
+  }
+  h3 {
+    font-size: 4rem;
+    font-weight: 500;
+  }
+}
