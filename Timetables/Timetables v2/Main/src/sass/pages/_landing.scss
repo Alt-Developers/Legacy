@@ -1,0 +1,115 @@
+.landing {
+    // padding: 3rem;
+    overflow: hidden;
+    min-height: 95vh;
+
+    &__header {
+        display: flex;
+        background-color: #FF5252;
+        padding: 3rem;
+
+        @include respond(phone) {
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 5rem;
+            color: #fff;
+
+            @include respond(phone) {
+                font-size: 4rem;
+            }
+        }
+
+        h3 {
+            font-size: 2rem;
+            padding-top: 1rem;
+            font-weight: 500;
+            color: #fff;
+
+            @include respond(phone) {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
+        margin-top: 2rem;
+        align-content: center;
+
+        @include respond(phone) {
+            margin-left: 0;
+        }
+
+    }
+
+    &__a {
+        background-color: #fff;
+        padding: 2rem;
+        font-weight: 700;
+        border-radius: 2rem !important;
+        font-size: 1.5rem;
+        color: #000;
+        transition: all .2s;
+        width: 15rem;
+        border: none;
+        height: 15rem;
+        margin-top: -2rem;
+        filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.10));
+
+        
+        &:hover {
+            box-shadow: white 0px 0px 10px;
+            scale: 1.1;
+        }
+
+        @include respond(phone) {
+            padding: 1.5rem;
+            margin: 1rem 1rem 1rem 0;
+            width: 80vw;
+            height: 6rem;
+        }
+    }
+
+    &__art {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-right: -4rem;
+        margin-top: 3rem;
+    }
+
+    &__row {
+        display: flex;
+        align-self: flex-end;
+        gap: 1.5rem;
+    }
+    &__row2 {
+        display: flex;
+        align-self: flex-end;
+        gap: 1.5rem;
+
+        div {
+            height: 25vh;
+            width: 23vw;
+
+            @include respond(phone) {
+                width: 20rem;
+            }
+        }
+    }
+
+    &__item {
+        height: 30vh;
+        width: 30vw;
+
+        @include respond(phone) {
+            width: 30rem;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.allHeadlines {
+    &__List {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+        margin-top: 3rem;
+    }
+
+    & a {
+        text-decoration: none;
+    }
+}
+
+.list {
+
+    &__date {
+        text-align: right;
+        padding: 0 0 4%;
+        opacity: 0;
+        transition-duration: 1s;
+
+        &:hover {
+            opacity: 100%;
+        }
+    }
+
+    &__1 {
+        @include listProperties;
+        background-image:linear-gradient(
+            to right ,
+            rgba(#202020 , 0.8),
+            rgba(#202020 , 0.5)),
+        url(../img/win11List.jpg);
+        transition-duration: .5s;
+
+        &:hover {
+            @include listHover;
+          }
+
+          
+        &:active {
+            box-shadow: #8b8b8b 0 0 0;
+            transform: scale(.9);
+        }
+
+        p {
+            text-align: right;
+        }
+    }
+    &__2 {
+        @include listProperties;
+        background-image:linear-gradient(
+            to right ,
+            rgba(#202020 , 0.8),
+            rgba(#202020 , 0.5)),
+        url(../img/california.jpeg);
+        transition-duration: .5s;
+
+        &:hover {
+            @include listHover;
+          }
+
+        &:active {
+            box-shadow: #8b8b8b 0 0 0;
+            transform: scale(.9);
+        }
+    }
+    &__3 {
+        @include listProperties;
+        background-image:linear-gradient(
+            to right ,
+            rgba(#202020 , 0.8),
+            rgba(#202020 , 0.5)),
+        url(../img/ambient.jpg);
+        background-position: center;
+        transition-duration: .5s;
+
+        &:hover {
+            @include listHover;
+          }
+        
+        &:active {
+            box-shadow: #8b8b8b 0 0 0;
+            transform: scale(.9);
+        }
+    }
+}

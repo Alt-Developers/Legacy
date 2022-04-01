@@ -1,111 +1,98 @@
-# Legacy 🕰
+# **Legacy** 🕰️
 
 This repository contains old / outdated projects from their main repository
 
-## How to get started?
+---
 
-### if you're downloading the version with node
+## **Contents**
 
-to get the code select the project folder and select the version you wanted to use then download it <br>
+### Timetables
 
-**after that use** <br>
+| Version        | Notes                                                                                                     |
+| :------------- | :-------------------------------------------------------------------------------------------------------- |
+| v1.0           | Forked project from [Galax028](https://github.com/Galax028) and added few basic features.                 |
+| v2.0           | Rebuilt timetables from the ground up with a fresh new look to Timetables with the Azalea Design language |
+| v2.1           | Made the Landing page, added the simple modal and configuration bar                                       |
+| v3.0 > Present | In main respository                                                                                       |
 
-```sh
-npm install
-or
-yarn install
-```
+> To Timetables Respository [Click Here](https://github.com/SS-Developers/Timetables)
 
-to install all of the required **node_modules** then
+### System 13
 
-```sh
-npm start
-or
-yarn start
-```
+| Version        | Notes                                |
+| :------------- | :----------------------------------- |
+| Alpha          | CLI writen in python                 |
+| Beta           | User interface written in javascript |
+| Experimental   | Expermenting with a modern look      |
+| v1.0           | Rebuilt System13 with a new look     |
+| v2.0           | Refined the design                   |
+| v2.0 (Node)    | Converted app into nodeJS            |
+| v3.0 > Present | In main respository                  |
 
-to start the server at port `8080 or 3000` depend on the service.
+> To System 13 Respository [Click Here](https://github.com/SS-Developers/system13)
 
-```
-[app.js]
+### Portals
 
-app.listen(3000);
-           ^^^^ Change this
-```
+| Version      |
+| :----------- |
+| Experimental |
+| 1.0          |
+| 2.0          |
 
-> _you can customize that by change the port in app.js_ <br>
->
-> > file might be in ./dist/app.js sometime.
+See for your self we can't explain
 
-> you can only change port if it's server-side application.
+> To Portals Respository [Click Here](https://github.com/SS-Developers/portals)
 
-### if you're downloading the version without node or react.
+---
 
-Just download and open `index.html`
+## **Installation Process** ⬇️
 
-## What does this repo contain?
+Simply clone this repository and you can now view legacy projects.
 
-Currently this repo contains
+### **For React Projects**
 
-1. System 13 [ Version 1 - 3 ]
-2. Portals [ Version 1 - 2 ]
-3. Timetables [ Version 1 ]
+1. Install the node packages
+   ```zsh
+   > npm install
+   # or
+   > yarn install
+   ```
+2. Start the react project and compile scss
+   ```zsh
+   > npm start
+   > npm run sass
+   # or
+   > yarn start
+   > yarn run sass
+   ```
 
-### **System13**
+<br />
 
-System 13 Legacy Folder [Click Here](System13)
-Url for the website [Click Here](https://system.ssdevelopers.xyz/)
+---
 
-- Alpha
-  - Python Edition (Terminal Based)
-- Beta
-  - Javascript Edition (First edition with User Interface)
-- Version 1.0
-  - Made User Interface more refined
-- Version 2.0 - 2.2
-  - Made Other Products section and better layout
-  - Improved overall website feeling , Better buttons , New Github page
-  - Huge improvements to UI , Better error detection , Enhanced responsive design
-- Experimental Edition
-  - Try new User Interface (Modern Minimal)
-- **Current Version**
-  - Go to current version of this Project [Click Here](https://github.com/SS-Developers/System13)
+<br />
 
-### **Portals**
+### **For NodeJS Project**
 
-Portals Legacy Folder [Click Here](Portals) <br>
-Url for the website [Click Here](https://ssdevelopers.xyz/)
-
-- Version 1.0
-  - First ever version of portal ( created in one day )
-- Version 2.0
-  - Second version of portal develop from version 1.0 UI look more refined and polished
-- **Current Version**
-  - Go to current version of this Project [Click Here](https://github.com/SS-Developers/Portals)
-
-### **Timetables**
-
-Timetables Legacy Folder [Click Here](Timetables) <br>
-Url for the website [Click Here](https://ssdevelopers.xyz/)
-
-- Version 1.0
-  - Original Version by galax
-  - added search functionality
-  - added thai language support
-  - change from plain html and JS to node MVC
-    - use JSON to configure the class
-    - use EJS as a view engine
-- **Current Version**
-  - Go to current version of this Project [Click Here](https://github.com/SS-Developers/timetables)
-
-## Copyrights
-
-This Project is protected under the
-
-```sh
-Mozilla Public License V2.0
-```
-
-to the license file [Click Here](LICENSE)
-
-**MPL 2.0 © 2021 Prawich & Jirat**
+1. Install the node packages
+   ```zsh
+   > npm install
+   # or
+   > yarn install
+   ```
+2. Start the project
+   ```zsh
+   > npm start
+   # or
+   > yarn start
+   ```
+   > **Note:**
+   >
+   > you can change the port that the server's running on at `./src/app.ts` or `./app.js`
+   >
+   > ```ts
+   > app.listen(8000);
+   >            ^^^^ Change This
+   > ```
+   >
+   > you can change it to any port avaliable

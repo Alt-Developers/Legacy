@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:  "Ubuntu","Noto Sans Thai",sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--font-color);
+}
+
+body {
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  background-color: var(--background-color);
+  min-height: 60vh;
+}

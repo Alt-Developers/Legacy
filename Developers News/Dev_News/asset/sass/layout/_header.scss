@@ -1,0 +1,45 @@
+// Main Header
+
+#main1 {
+    background-position: top center;
+    background-attachment: scroll;
+    background-size: cover;
+    // height: 80vh;
+    // width: 100%;
+  
+    width: 100%;
+    height: 500px;
+    // background-image: url("https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-13-Pro_Colors_09142021_big.jpg.slideshow-medium_2x.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+  background-image: url(../img/newsbg.png);
+
+  }
+
+.blur {
+  backdrop-filter: blur(1rem);
+}
+
+#placeholdersoyoucanscroll {
+    height: 100vh;
+}
+
+.heroCon2 {
+    display: flex;
+    text-align: center;
+    color: white;
+  }
+
+// Time Hero
+
+.time_hero {
+    height: 10rem;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+  }
+
