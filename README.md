@@ -17,6 +17,30 @@ This repository contains old / outdated projects from their main repository
 
 > To Timetables Respository [Click Here](https://github.com/SS-Developers/Timetables)
 
+### SS APIs
+
+<!--
+- Version 2.0
+  - Added validation for adding players.
+- Version 3.0
+  -
+- Version 4.0
+  - SS Timetables v2.0 features.
+- Version 4.6 > 4.7
+  - Modal from backend system
+  - Re-written the API for better optimization. -->
+
+| Version        | Notes                                                                        |
+| :------------- | :--------------------------------------------------------------------------- |
+| v1.0           | All basic API features. & Error Handling                                     |
+| v2.0           | Validation Features                                                          |
+| v3.0           | SS Account support and polished system13's API endpoints + expenses project. |
+| v4.0           | SS Timetables 2.0 Features                                                   |
+| v4.6           | Modal from backend system & Re-wrriten for better optimization               |
+| v5.0 > Present | In main respository                                                          |
+
+> To SS APIs Respository [Click Here](https://github.com/SS-Developers/SS-APIs)
+
 ### System 13
 
 | Version        | Notes                                |
