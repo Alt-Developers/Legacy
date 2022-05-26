@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import "react-loading-skeleton/dist/skeleton.css";
 import TimetableDay from "../components/TimetableDay";
 
-const Timetable = props => {
+const Timetable = (props) => {
   // const { timetableID: params } = useParams();
   const [hoverMon, setHoverMon] = useState(false);
   const [hoverTue, setHoverTue] = useState(false);
@@ -23,10 +23,10 @@ const Timetable = props => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const format = useSelector(state => state.account.format);
-  const userInfo = useSelector(state => state.account.userInfo);
-  const dateTime = useSelector(state => state.account.config.dateTime);
-  const language = useSelector(state => state.account.language);
+  const format = useSelector((state) => state.account.format);
+  const userInfo = useSelector((state) => state.account.userInfo);
+  const dateTime = useSelector((state) => state.account.config.dateTime);
+  const language = useSelector((state) => state.account.language);
 
   const timetableColor = "#" + searchParams.get("color");
 
@@ -42,7 +42,7 @@ const Timetable = props => {
 
   useEffect(() => {
     fetch(
-      `https://apis.ssdevelopers.xyz/timetables/getTimetable?classNo=${searchParams.get(
+      `http://localhost:8080/timetables/getTimetable?classNo=${searchParams.get(
         "class"
       )}&program=${program}`,
       {
@@ -51,8 +51,8 @@ const Timetable = props => {
         },
       }
     )
-      .then(data => data.json())
-      .then(data => {
+      .then((data) => data.json())
+      .then((data) => {
         if (data.error) {
           navigate("/");
         }
@@ -82,7 +82,7 @@ const Timetable = props => {
 
       let periodFull = [];
       for (const day in timetableContent) {
-        timetableContent[day].map(period => {
+        timetableContent[day].map((period) => {
           periodFull.push(format[program][period].name.toLowerCase());
         });
       }
@@ -91,22 +91,22 @@ const Timetable = props => {
     }
   }, [timetableContent]);
 
-  const monHoverHandler = liftedData => setHoverMon(liftedData);
-  const tueHoverHandler = liftedData => setHoverTue(liftedData);
-  const wedHoverHandler = liftedData => setHoverWed(liftedData);
-  const thuHoverHandler = liftedData => setHoverThu(liftedData);
-  const friHoverHandler = liftedData => setHoverFri(liftedData);
+  const monHoverHandler = (liftedData) => setHoverMon(liftedData);
+  const tueHoverHandler = (liftedData) => setHoverTue(liftedData);
+  const wedHoverHandler = (liftedData) => setHoverWed(liftedData);
+  const thuHoverHandler = (liftedData) => setHoverThu(liftedData);
+  const friHoverHandler = (liftedData) => setHoverFri(liftedData);
 
-  const searchHandler = event => {
+  const searchHandler = (event) => {
     const keypress = event.target.value.toLowerCase();
     let periodFull = [];
     for (const day in timetableContent) {
-      timetableContent[day].map(period => {
+      timetableContent[day].map((period) => {
         periodFull.push(format[program][period].name.toLowerCase());
       });
     }
 
-    setsearchedPeriod(periodFull.filter(period => period.includes(keypress)));
+    setsearchedPeriod(periodFull.filter((period) => period.includes(keypress)));
   };
 
   if (isLoading) {
@@ -114,13 +114,14 @@ const Timetable = props => {
       <>
         <section
           className="timetableNav"
-          style={{ backgroundColor: timetableColor }}>
+          style={{ backgroundColor: timetableColor }}
+        >
           <Link to="/">
             <h3>&#8249; Home</h3>
           </Link>
 
           <img
-            src={`https://apis.ssdevelopers.xyz/${userInfo.profilePicture}`}
+            src={`http://localhost:8080/${userInfo.profilePicture}`}
             alt="user profile picture"
             height="60"
             width="60"
@@ -135,7 +136,8 @@ const Timetable = props => {
     <>
       <section
         className="timetableNav"
-        style={{ backgroundColor: timetableColor }}>
+        style={{ backgroundColor: timetableColor }}
+      >
         <Link to="/" className="timetableNav__home">
           <h3>&#8249; {language === "EN" ? "Home" : "หน้าหลัก"}</h3>
         </Link>
@@ -144,7 +146,7 @@ const Timetable = props => {
           <i class="bx bx-slider" />
         </Link>
         <img
-          src={`https://apis.ssdevelopers.xyz/${userInfo.profilePicture}`}
+          src={`http://localhost:8080/${userInfo.profilePicture}`}
           alt="user profile picture"
           height="50"
           width="50"
@@ -175,7 +177,8 @@ const Timetable = props => {
           <button
             onClick={() => {
               setPeriodTime(!periodTime);
-            }}>
+            }}
+          >
             Period time &#x25B2;
           </button>
         )}
@@ -192,13 +195,15 @@ const Timetable = props => {
                   height: "85vh",
                 }
               : {}
-          }>
+          }
+        >
           {periodTime && (
             <>
               <div></div>
               <div
                 className="timetablePeriodTime"
-                style={{ gridColumn: "2 / 5", gridRow: "1 / 2" }}>
+                style={{ gridColumn: "2 / 5", gridRow: "1 / 2" }}
+              >
                 <h3>08:30 - 09:10</h3>
                 <h3>09:20 - 10:00</h3>
                 <h3 style={{ marginRight: "1rem" }}>10:10 - 10:50</h3>

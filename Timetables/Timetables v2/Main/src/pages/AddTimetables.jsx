@@ -10,10 +10,10 @@ import { useState } from "react";
 import { refetchActions } from "../context/refetchSlice";
 import GlanceItem from "../components/GlanceItem";
 
-const AddTimetables = props => {
-  const userInfo = useSelector(state => state.account.userInfo);
+const AddTimetables = (props) => {
+  const userInfo = useSelector((state) => state.account.userInfo);
   const dispatch = useDispatch();
-  const language = useSelector(state => state.account.language);
+  const language = useSelector((state) => state.account.language);
 
   const [selectedLanguage, setSelectedLanguage] = useState(
     userInfo.config.language
@@ -42,7 +42,7 @@ const AddTimetables = props => {
 
   useEffect(() => {
     console.log(selectedLanguage, selectedCovid, selectedDateFormat);
-    fetch("https://apis.ssdevelopers.xyz/auth/editConfig", {
+    fetch("http://localhost:8080/auth/editConfig", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const AddTimetables = props => {
         showCovid: selectedCovid,
         dateTime: selectedDateFormat,
       }),
-    }).then(data => console.log(data.json()));
+    }).then((data) => console.log(data.json()));
   }, [selectedLanguage, selectedCovid, selectedDateFormat]);
 
   return (
@@ -102,7 +102,8 @@ const AddTimetables = props => {
               className="config__logout"
               onClick={() => {
                 dispatch(accountActions.logout());
-              }}>
+              }}
+            >
               <p className="hiddenOnPC">Logout</p>
               <i className="bx bx-log-out hiddenOnPhone"></i>
             </button>
@@ -112,7 +113,8 @@ const AddTimetables = props => {
           </h1>
           <div
             className="bar"
-            style={{ height: "fit-content", marginBottom: "0rem" }}>
+            style={{ height: "fit-content", marginBottom: "0rem" }}
+          >
             <div className="config__bar">
               <div className="config__item">
                 <h3>{language === "EN" ? "Language" : "ภาษา / Language"}</h3>
@@ -210,7 +212,8 @@ const AddTimetables = props => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.2, delay: 0.2 }}
-                className="bar timetable">
+                className="bar timetable"
+              >
                 {userInfo.primaryClass && (
                   <TimetableItem
                     color={userInfo.primaryClass.color}
@@ -222,7 +225,7 @@ const AddTimetables = props => {
                   />
                 )}
                 {userInfo.starredClasses &&
-                  userInfo.starredClasses.map(element => (
+                  userInfo.starredClasses.map((element) => (
                     <TimetableItem
                       style={{ width: 300 }}
                       key={Math.random}

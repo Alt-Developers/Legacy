@@ -1,0 +1,22 @@
+{
+  "name": "2.0portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "a": "sass --watch public/src/sass/main.scss:public/src/style/style.css",
+    "start": "nodemon app.js"
+  },
+  "author": "Jirat Chutrakul && Prawich Thawansakdivudhi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "node-sass": "^6.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

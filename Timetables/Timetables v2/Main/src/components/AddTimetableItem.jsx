@@ -8,15 +8,15 @@ import { refetchActions } from "../context/refetchSlice";
 import { useNavigate } from "react-router";
 import { modalActions } from "../context/modalSlice";
 
-const AddTimetableItem = props => {
+const AddTimetableItem = (props) => {
   const [selectedOption, setSelectedOption] = useState(props.defaultOption);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const submitHandler = event => {
+  const submitHandler = (event) => {
     event.preventDefault();
 
-    fetch("https://apis.ssdevelopers.xyz/timetables/registerUserClass", {
+    fetch("http://localhost:8080/timetables/registerUserClass", {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -27,7 +27,7 @@ const AddTimetableItem = props => {
         program: selectedOption.split("+")[1],
         isPrimary: props.isPrimary,
       }),
-    }).then(data => {
+    }).then((data) => {
       dispatch(refetchActions.refetch());
       if (props.isNewUser) {
         navigate("/");
@@ -40,23 +40,21 @@ const AddTimetableItem = props => {
     <form
       className="addTimetables"
       onSubmit={submitHandler}
-      style={props.style}>
+      style={props.style}
+    >
       <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
         <h3>{props.header}</h3>
         <SelectSearch
           options={[]}
-          getOptions={query => {
+          getOptions={(query) => {
             return new Promise((resolve, reject) => {
-              fetch(
-                `https://apis.ssdevelopers.xyz/timetables/getNotUserClass`,
-                {
-                  headers: {
-                    Authorization: "Bearer " + localStorage.getItem("token"),
-                  },
-                }
-              )
-                .then(response => response.json())
-                .then(data => {
+              fetch(`http://localhost:8080/timetables/getNotUserClass`, {
+                headers: {
+                  Authorization: "Bearer " + localStorage.getItem("token"),
+                },
+              })
+                .then((response) => response.json())
+                .then((data) => {
                   resolve(
                     data.data.map(({ classNo, program, className }) => ({
                       value: `${classNo}+${program}`,

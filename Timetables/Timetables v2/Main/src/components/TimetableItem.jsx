@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { refetchActions } from "../context/refetchSlice";
 import { Link } from "react-router-dom";
 
-const TimetableList = props => {
+const TimetableList = (props) => {
   const [isHovering, setIsHovering] = useState(false);
   const [isRemoved, setIsRemoved] = useState();
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ const TimetableList = props => {
   }
 
   if (isRemoved) {
-    fetch("https://apis.ssdevelopers.xyz/timetables/removeRegisteredClass", {
+    fetch("http://localhost:8080/timetables/removeRegisteredClass", {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -29,7 +29,7 @@ const TimetableList = props => {
         classNo: props.classNo,
         program: props.program,
       }),
-    }).then(data => window.location.reload());
+    }).then((data) => window.location.reload());
 
     return <></>;
   }
@@ -39,7 +39,8 @@ const TimetableList = props => {
       <Link
         to={`/timetable?class=${props.classNo}&program=${
           props.program
-        }&color=${props.color.replace("#", "")}`}>
+        }&color=${props.color.replace("#", "")}`}
+      >
         <motion.div
           className={`timetable__item ${props.remove && "shake"}`}
           style={
@@ -62,7 +63,8 @@ const TimetableList = props => {
             if (props.remove) {
               setIsRemoved(true);
             }
-          }}>
+          }}
+        >
           <h3>{props.text}</h3>
           <h4>{props.subText}</h4>
         </motion.div>
@@ -92,7 +94,8 @@ const TimetableList = props => {
           if (props.remove) {
             setIsRemoved(true);
           }
-        }}>
+        }}
+      >
         <h3>{props.text}</h3>
         <h4>{props.subText}</h4>
       </motion.div>

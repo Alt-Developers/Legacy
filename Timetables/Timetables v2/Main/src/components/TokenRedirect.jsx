@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { accountActions } from "../context/accountSlice";
 import Loading from "./Loading";
 
-const TokenRedirect = props => {
+const TokenRedirect = (props) => {
   const { token: params } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -12,16 +12,16 @@ const TokenRedirect = props => {
   useEffect(() => {
     localStorage.setItem("token", params.replace(":", ""));
 
-    fetch("https://apis.ssdevelopers.xyz/timetables/getUser", {
+    fetch("http://localhost:8080/timetables/getUser", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
     })
-      .then(data => {
+      .then((data) => {
         if (data.status === 200) return data.json();
         if (data.status === 500) return;
       })
-      .then(data => {
+      .then((data) => {
         dispatch(accountActions.login(data));
         navigate("/");
       });

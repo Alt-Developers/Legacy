@@ -1,0 +1,36 @@
+.p404 {
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 10vh;
+    background-color: $gray-dark-3;
+
+    &--logo-wrapper {
+      font-size: 4rem;
+      display: flex;
+      align-items: center;
+      img {
+        height: 9vh;
+      }
+    }
+    &--title {
+      font-size: 4vh;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__wrapper-content {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--content {
+      background-color: $gray-light-1;
+      padding: 3rem;
+      border-radius: 1.1rem;
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+}

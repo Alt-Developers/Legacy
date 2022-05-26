@@ -1,0 +1,55 @@
+.blocks {
+  height: 200rem;
+  margin: 0 2% 0 2%;
+
+  &__1-3 {
+    height: 70vh;
+    z-index: -1;
+
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    grid-template-areas: "small big";
+    grid-gap: 2rem;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "big";
+      height: 70vh;
+      grid-gap: 0;
+      padding: 1rem;
+    }
+  }
+
+  &__3-1 {
+    margin-top: 2rem;
+    height: 70vh;
+    z-index: -1;
+
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    grid-template-areas: "big small";
+    grid-gap: 2rem;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "big";
+      height: 70vh;
+      grid-gap: 0;
+      padding: 1rem;
+    }
+  }
+
+  &__big {
+    grid-area: big;
+    background-color: $gray-light-1;
+    border-radius: 1.1rem;
+  }
+
+  &__small {
+    grid-area: small;
+    background-color: $gray-light-1;
+    border-radius: 1.1rem;
+  }
+}

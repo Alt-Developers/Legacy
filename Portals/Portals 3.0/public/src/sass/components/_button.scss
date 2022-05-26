@@ -1,0 +1,68 @@
+.btn {
+  color: $blinding-white;
+  text-decoration: none;
+  background-color: $gray-light-1;
+  border: none;
+  width: 40rem;
+  height: 5rem;
+  border-radius: 1.1rem;
+  margin-top: 5rem;
+  transition: all 0.4s;
+  // border: $blinding-white solid 0.3rem;
+  // transition: 0.5s;
+
+  @include respond(phone) {
+    color: $blinding-white;
+    text-decoration: none;
+    background-color: $gray-light-1;
+    border: none;
+    width: 10rem;
+    height: 5.1rem;
+    border-radius: 1.1rem;
+    transition: all 0.4s;
+    margin-left: 1rem;
+  }
+
+  &:hover {
+    color: $paragrph-text-1;
+    background-color: $blinding-white;
+    box-shadow: rgba($color: #ffffff, $alpha: 0.5) 0rem 0rem 3rem;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    box-shadow: rgba($color: #000000, $alpha: 0.5) 0rem 0rem 3rem;
+    transform: scale(0.9);
+  }
+}
+
+.dark-btn {
+  background-color: $gray-dark-2;
+}
+
+.small-btn {
+  color: $blinding-white;
+  text-decoration: none;
+  background-color: $gray-light-1;
+  border: none;
+  width: 5rem;
+  height: 5.1rem;
+  border-radius: 1.1rem;
+  transition: all 0.4s;
+  margin-left: 1rem;
+  // border: $blinding-white solid 0.3rem;
+  // transition: 0.5s;
+
+  &:hover {
+    color: $paragrph-text-1;
+    background-color: $blinding-white;
+    box-shadow: rgba($color: #ffffff, $alpha: 0.5) 0rem 0rem 3rem;
+
+    transform: scale(1.05);
+  }
+
+  &:active {
+    box-shadow: rgba($color: #000000, $alpha: 0.5) 0rem 0rem 3rem;
+    transform: scale(0.9);
+  }
+}

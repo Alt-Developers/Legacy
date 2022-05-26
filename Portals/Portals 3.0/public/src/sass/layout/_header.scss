@@ -1,0 +1,118 @@
+.header {
+  p {
+    font-size: 3rem;
+  }
+  &__wrapper {
+    background-color: $gray-light-1;
+    margin: 2%;
+    height: 70vh;
+    border-radius: 1.1rem;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+      "main menu"
+      "main blank";
+
+    overflow: hidden;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "main";
+
+      height: 50vh;
+      margin: 2rem;
+    }
+  }
+
+  &__main {
+    grid-area: main;
+
+    padding: 2rem 2rem 2rem 4rem;
+    background: rgb(255, 0, 0);
+    background: linear-gradient(
+      143deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(58, 206, 255, 1) 100%
+    );
+    transition: all 1s;
+
+    @include respond(phone) {
+      padding: 2rem;
+    }
+
+    h1 {
+      @include respond(phone) {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+    grid-template-areas: "a1" "a2" "a3" "a4";
+    transition: all 0.2s;
+    background-color: $gray-light-1;
+
+    @include respond(phone) {
+      display: none;
+      visibility: hidden;
+    }
+
+    &:hover {
+      transform: translateX(-5rem);
+    }
+
+    & > * {
+      list-style: none;
+      text-decoration: none;
+      color: $blinding-white;
+
+      padding: 2.5rem;
+      font-size: 3rem;
+      font-weight: 500;
+    }
+
+    &--1 {
+      grid-area: a1;
+      transition: all 0.3s;
+      height: 100%;
+
+      @include JellyEffect;
+    }
+    &--2 {
+      grid-area: a2;
+      transition: all 0.3s;
+      height: 100%;
+
+      @include JellyEffect;
+    }
+    &--3 {
+      grid-area: a3;
+      transition: all 0.3s;
+      height: 100%;
+
+      @include JellyEffect;
+    }
+    &--4 {
+      grid-area: a4;
+      transition: all 0.3s;
+      height: 100%;
+
+      @include JellyEffect;
+    }
+  }
+
+  &__blank {
+    background-color: $gray-light-1;
+    grid-area: blank;
+    transition: all 0.2s;
+  }
+
+  &__menu:hover + &__blank {
+    transform: translateX(-5rem);
+  }
+}

@@ -4,10 +4,10 @@ import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const Header = props => {
-  const userInfo = useSelector(state => state.account.userInfo);
-  const language = useSelector(state => state.account.language);
-  const dateTime = useSelector(state => state.account.config.dateTime);
+const Header = (props) => {
+  const userInfo = useSelector((state) => state.account.userInfo);
+  const language = useSelector((state) => state.account.language);
+  const dateTime = useSelector((state) => state.account.config.dateTime);
 
   const [clock, setClock] = useState(
     new Date().toLocaleString("en-US", {
@@ -39,7 +39,8 @@ const Header = props => {
         // backgroundImage:
         //   'url("https://i.ytimg.com/vi/q0ch_cCLvVo/maxresdefault.jpg")',
         // filter: "blur(1.1rem)",
-      }}>
+      }}
+    >
       {!props.text ? (
         <h1>
           {language === "EN" ? "It's currently" : "ขณะนี้เวลา"} <br />
@@ -68,10 +69,11 @@ const Header = props => {
               <i
                 className={`bx ${
                   props.clickProfile === "home" ? "bx-home-alt" : "bx-slider"
-                }`}></i>
+                }`}
+              ></i>
             </span>
             <motion.img
-              src={`https://apis.ssdevelopers.xyz/${userInfo.profilePicture}`}
+              src={`http://localhost:8080/${userInfo.profilePicture}`}
               alt="user profile picture"
               height="150"
               width="150"
